@@ -37,6 +37,8 @@ class SharedViewModel : ViewModel() {
     private val name29: MutableLiveData<String> by lazy { MutableLiveData<String>() }
     private val name30: MutableLiveData<String> by lazy { MutableLiveData<String>() }
 
+    //Hello
+    
     fun setName(nameNumber: Int, newName: String) {
         when (nameNumber) {
             1 -> {name1.value = newName}
