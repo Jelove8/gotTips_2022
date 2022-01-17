@@ -71,7 +71,6 @@ class SharedViewModel : ViewModel() {
             30 -> {name30.value = newName}
         }
     }
-
     fun getName(nameNumber: Int): String {
 
         return when (nameNumber) {
@@ -141,7 +140,6 @@ class SharedViewModel : ViewModel() {
     private val hours28: MutableLiveData<String> by lazy { MutableLiveData<String>() }
     private val hours29: MutableLiveData<String> by lazy { MutableLiveData<String>() }
     private val hours30: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val totalHours: MutableLiveData<String> by lazy { MutableLiveData<String>() }
 
     fun setHours (nameNumber: Int, newHours: String) {
         when (nameNumber) {
@@ -177,7 +175,6 @@ class SharedViewModel : ViewModel() {
             30 -> {hours30.value = newHours}
         }
     }
-
     fun getHours (nameNumber: Int): String {
         return when (nameNumber) {
             1 -> {hours1.value.toString()}
@@ -214,18 +211,6 @@ class SharedViewModel : ViewModel() {
         }
     }
 
-    fun setTotalHours() {
-        totalHours.value = (hours1.value.toString().toDouble() + hours2.value.toString().toDouble() + hours3.value.toString().toDouble() + hours4.value.toString().toDouble() + hours5.value.toString().toDouble() +
-                hours6.value.toString().toDouble() + hours7.value.toString().toDouble() + hours8.toString().toDouble() + hours9.toString().toDouble() + hours10.value.toString().toDouble() +
-                hours11.value.toString().toDouble() + hours12.value.toString().toDouble() + hours13.value.toString().toDouble() + hours14.value.toString().toDouble() + hours15.value.toString().toDouble() +
-                hours16.value.toString().toDouble() + hours17.value.toString().toDouble() + hours18.value.toString().toDouble() + hours19.value.toString().toDouble() + hours20.value.toString().toDouble() +
-                hours21.value.toString().toDouble() + hours22.value.toString().toDouble() + hours23.value.toString().toDouble() + hours24.value.toString().toDouble() + hours25.value.toString().toDouble() +
-                hours26.value.toString().toDouble() + hours27.value.toString().toDouble() + hours28.value.toString().toDouble() + hours29.value.toString().toDouble() + hours30.value.toString().toDouble()).toString()
-
-        if (totalHours.value == null) {
-            totalHours.value = "null"
-        }
-    }
 
 
     //Variables & Functions for amountBills
@@ -236,94 +221,5 @@ class SharedViewModel : ViewModel() {
     private val amountTwenties: MutableLiveData<Int> by lazy { MutableLiveData<Int>() }
     private val totalTips: MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
 
-    fun setBills(ones: Double, twos: Double, fives: Double, tens: Double, twenties: Double) {
-        amountOnes.value = ones.toInt()
-        amountTwos.value = twos.toInt() / 2
-        amountFives.value = fives.toInt() / 5
-        amountTens.value = tens.toInt() / 10
-        amountTwenties.value = twenties.toInt() / 20
 
-        totalTips.value = ones + twos + fives + tens + twenties
-    }
-
-    fun getBills(billType: Int): String {
-        return when (billType) {
-            1 -> { amountOnes.toString() }
-            2 -> { amountTwos.toString() }
-            5 -> { amountFives.toString() }
-            10 -> { amountTens.toString() }
-            20 -> { amountTwenties.toString() }
-            else -> { "Error"}
-        }
-    }
-
-
-
-    //Variables & Functions involving TipRate and partnerTips.
-    private val tips1: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips2: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips3: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips4: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips5: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips6: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips7: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips8: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips9: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips10: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips11: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips12: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips13: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips14: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips15: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips16: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips17: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips18: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips19: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips20: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips21: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips22: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips23: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips24: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips25: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips26: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips27: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips28: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips29: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tips30: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-    private val tipRate: MutableLiveData<String> by lazy { MutableLiveData<String>() }
-
-    fun calculateTips() {
-        tipRate.value = (totalTips.value.toString().toDouble() / totalHours.toString().toDouble()).toString()
-
-        tips1.value = (tipRate.value.toString().toDouble() * hours1.value.toString().toDouble()).toString()
-        tips2.value = (tipRate.value.toString().toDouble() * hours2.value.toString().toDouble()).toString()
-        tips3.value = (tipRate.value.toString().toDouble() * hours3.value.toString().toDouble()).toString()
-        tips4.value = (tipRate.value.toString().toDouble() * hours4.value.toString().toDouble()).toString()
-        tips5.value = (tipRate.value.toString().toDouble() * hours5.value.toString().toDouble()).toString()
-        tips6.value = (tipRate.value.toString().toDouble() * hours6.value.toString().toDouble()).toString()
-        tips7.value = (tipRate.value.toString().toDouble() * hours7.value.toString().toDouble()).toString()
-        tips8.value = (tipRate.value.toString().toDouble() * hours8.value.toString().toDouble()).toString()
-        tips9.value = (tipRate.value.toString().toDouble() * hours9.value.toString().toDouble()).toString()
-        tips10.value = (tipRate.value.toString().toDouble() * hours10.value.toString().toDouble()).toString()
-        tips11.value = (tipRate.value.toString().toDouble() * hours11.value.toString().toDouble()).toString()
-        tips12.value = (tipRate.value.toString().toDouble() * hours12.value.toString().toDouble()).toString()
-        tips13.value = (tipRate.value.toString().toDouble() * hours13.value.toString().toDouble()).toString()
-        tips14.value = (tipRate.value.toString().toDouble() * hours14.value.toString().toDouble()).toString()
-        tips15.value = (tipRate.value.toString().toDouble() * hours15.value.toString().toDouble()).toString()
-        tips16.value = (tipRate.value.toString().toDouble() * hours16.value.toString().toDouble()).toString()
-        tips17.value = (tipRate.value.toString().toDouble() * hours17.value.toString().toDouble()).toString()
-        tips18.value = (tipRate.value.toString().toDouble() * hours18.value.toString().toDouble()).toString()
-        tips19.value = (tipRate.value.toString().toDouble() * hours19.value.toString().toDouble()).toString()
-        tips20.value = (tipRate.value.toString().toDouble() * hours20.value.toString().toDouble()).toString()
-        tips21.value = (tipRate.value.toString().toDouble() * hours21.value.toString().toDouble()).toString()
-        tips22.value = (tipRate.value.toString().toDouble() * hours22.value.toString().toDouble()).toString()
-        tips23.value = (tipRate.value.toString().toDouble() * hours23.value.toString().toDouble()).toString()
-        tips24.value = (tipRate.value.toString().toDouble() * hours24.value.toString().toDouble()).toString()
-        tips25.value = (tipRate.value.toString().toDouble() * hours25.value.toString().toDouble()).toString()
-        tips26.value = (tipRate.value.toString().toDouble() * hours26.value.toString().toDouble()).toString()
-        tips27.value = (tipRate.value.toString().toDouble() * hours27.value.toString().toDouble()).toString()
-        tips28.value = (tipRate.value.toString().toDouble() * hours28.value.toString().toDouble()).toString()
-        tips29.value = (tipRate.value.toString().toDouble() * hours29.value.toString().toDouble()).toString()
-        tips30.value = (tipRate.value.toString().toDouble() * hours30.value.toString().toDouble()).toString()
-    }
 }
