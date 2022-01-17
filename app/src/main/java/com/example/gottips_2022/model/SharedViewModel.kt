@@ -242,4 +242,179 @@ class SharedViewModel : ViewModel() {
             else -> {  "Error" }
         }
     }
+
+
+    //Variables & Functions to populate OutputTips_Fragment
+    private val tips1: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips2: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips3: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips4: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips5: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips6: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips7: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips8: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips9: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips10: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips11: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips12: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips13: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips14: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips15: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips16: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips17: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips18: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips19: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips20: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips21: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips22: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips23: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips24: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips25: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips26: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips27: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips28: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips29: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tips30: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val tipRate: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+
+    fun getTipRate(): Double {
+
+        var currentTipRate = 0.00
+        currentTipRate = totalTips.value.toString().toDouble() / totalHours.value.toString().toDouble()
+
+        return if (currentTipRate.isNaN()) { 0.00 }
+        else { currentTipRate }
+
+    }
+
+    fun getTips(partnerNumber: Int): String {
+
+        return when (partnerNumber) {
+            1 -> {
+                if (hours1.value.isNullOrEmpty()) { "0.00" }
+                else { (hours1.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            2 -> {
+                if (hours2.value.isNullOrEmpty()) { "0.00" }
+                else { (hours2.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            3 -> {
+                if (hours3.value.isNullOrEmpty()) { "0.00" }
+                else { (hours3.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            4 -> {
+                if (hours4.value.isNullOrEmpty()) { "0.00" }
+                else { (hours4.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            5 -> {
+                if (hours5.value.isNullOrEmpty()) { "0.00" }
+                else { (hours5.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            6 -> {
+                if (hours6.value.isNullOrEmpty()) { "0.00" }
+                else { (hours6.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            7 -> {
+                if (hours7.value.isNullOrEmpty()) { "0.00" }
+                else { (hours7.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            8 -> {
+                if (hours8.value.isNullOrEmpty()) { "0.00" }
+                else { (hours8.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            9 -> {
+                if (hours9.value.isNullOrEmpty()) { "0.00" }
+                else { (hours9.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            10 -> {
+                if (hours10.value.isNullOrEmpty()) { "0.00" }
+                else { (hours10.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            11 -> {
+                if (hours11.value.isNullOrEmpty()) { "0.00" }
+                else { (hours11.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            12 -> {
+                if (hours12.value.isNullOrEmpty()) { "0.00" }
+                else { (hours12.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            13 -> {
+                if (hours13.value.isNullOrEmpty()) { "0.00" }
+                else { (hours13.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            14 -> {
+                if (hours14.value.isNullOrEmpty()) { "0.00" }
+                else { (hours14.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            15 -> {
+                if (hours15.value.isNullOrEmpty()) { "0.00" }
+                else { (hours15.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            16 -> {
+                if (hours16.value.isNullOrEmpty()) { "0.00" }
+                else { (hours16.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            17 -> {
+                if (hours17.value.isNullOrEmpty()) { "0.00" }
+                else { (hours17.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            18 -> {
+                if (hours18.value.isNullOrEmpty()) { "0.00" }
+                else { (hours18.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            19 -> {
+                if (hours19.value.isNullOrEmpty()) { "0.00" }
+                else { (hours19.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            20 -> {
+                if (hours20.value.isNullOrEmpty()) { "0.00" }
+                else { (hours20.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            21 -> {
+                if (hours21.value.isNullOrEmpty()) { "0.00" }
+                else { (hours21.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            22 -> {
+                if (hours22.value.isNullOrEmpty()) { "0.00" }
+                else { (hours22.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            23 -> {
+                if (hours23.value.isNullOrEmpty()) { "0.00" }
+                else { (hours23.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            24 -> {
+                if (hours24.value.isNullOrEmpty()) { "0.00" }
+                else { (hours24.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            25 -> {
+                if (hours25.value.isNullOrEmpty()) { "0.00" }
+                else { (hours25.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            26 -> {
+                if (hours26.value.isNullOrEmpty()) { "0.00" }
+                else { (hours26.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            27 -> {
+                if (hours27.value.isNullOrEmpty()) { "0.00" }
+                else { (hours27.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            28 -> {
+                if (hours28.value.isNullOrEmpty()) { "0.00" }
+                else { (hours28.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            29 -> {
+                if (hours29.value.isNullOrEmpty()) { "0.00" }
+                else { (hours29.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            30 -> {
+                if (hours30.value.isNullOrEmpty()) { "0.00" }
+                else { (hours30.value.toString().toDouble() * getTipRate()).toString() }
+            }
+            else -> { "Error" }
+        }
+
+    }
+
+
+
 }
