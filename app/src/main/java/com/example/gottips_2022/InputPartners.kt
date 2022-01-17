@@ -15,43 +15,44 @@ class InputPartners : Fragment() {
     private val viewModel: SharedViewModel by activityViewModels()
     private var binding1: FragmentInputPartnersBinding? = null
     private val binding get() = binding1!!
-    private var sumHours = 0.00
+    private var currentSumHours = 0.00
 
     private fun calculateSumHours() {
-        sumHours = 0.00
+        currentSumHours = 0.00
 
-        if (binding.hours1.text.isNotEmpty()) { sumHours += binding.hours1.text.toString().toDouble() }
-        if (binding.hours2.text.isNotEmpty()) { sumHours += binding.hours2.text.toString().toDouble() }
-        if (binding.hours3.text.isNotEmpty()) { sumHours += binding.hours3.text.toString().toDouble() }
-        if (binding.hours4.text.isNotEmpty()) { sumHours += binding.hours4.text.toString().toDouble() }
-        if (binding.hours5.text.isNotEmpty()) { sumHours += binding.hours5.text.toString().toDouble() }
-        if (binding.hours6.text.isNotEmpty()) { sumHours += binding.hours6.text.toString().toDouble() }
-        if (binding.hours7.text.isNotEmpty()) { sumHours += binding.hours7.text.toString().toDouble() }
-        if (binding.hours8.text.isNotEmpty()) { sumHours += binding.hours8.text.toString().toDouble() }
-        if (binding.hours9.text.isNotEmpty()) { sumHours += binding.hours9.text.toString().toDouble() }
-        if (binding.hours10.text.isNotEmpty()) { sumHours += binding.hours10.text.toString().toDouble() }
-        if (binding.hours11.text.isNotEmpty()) { sumHours += binding.hours11.text.toString().toDouble() }
-        if (binding.hours12.text.isNotEmpty()) { sumHours += binding.hours12.text.toString().toDouble() }
-        if (binding.hours13.text.isNotEmpty()) { sumHours += binding.hours13.text.toString().toDouble() }
-        if (binding.hours14.text.isNotEmpty()) { sumHours += binding.hours14.text.toString().toDouble() }
-        if (binding.hours15.text.isNotEmpty()) { sumHours += binding.hours15.text.toString().toDouble() }
-        if (binding.hours16.text.isNotEmpty()) { sumHours += binding.hours16.text.toString().toDouble() }
-        if (binding.hours17.text.isNotEmpty()) { sumHours += binding.hours17.text.toString().toDouble() }
-        if (binding.hours18.text.isNotEmpty()) { sumHours += binding.hours18.text.toString().toDouble() }
-        if (binding.hours19.text.isNotEmpty()) { sumHours += binding.hours19.text.toString().toDouble() }
-        if (binding.hours20.text.isNotEmpty()) { sumHours += binding.hours20.text.toString().toDouble() }
-        if (binding.hours21.text.isNotEmpty()) { sumHours += binding.hours21.text.toString().toDouble() }
-        if (binding.hours22.text.isNotEmpty()) { sumHours += binding.hours22.text.toString().toDouble() }
-        if (binding.hours23.text.isNotEmpty()) { sumHours += binding.hours23.text.toString().toDouble() }
-        if (binding.hours24.text.isNotEmpty()) { sumHours += binding.hours24.text.toString().toDouble() }
-        if (binding.hours25.text.isNotEmpty()) { sumHours += binding.hours25.text.toString().toDouble() }
-        if (binding.hours26.text.isNotEmpty()) { sumHours += binding.hours26.text.toString().toDouble() }
-        if (binding.hours27.text.isNotEmpty()) { sumHours += binding.hours27.text.toString().toDouble() }
-        if (binding.hours28.text.isNotEmpty()) { sumHours += binding.hours28.text.toString().toDouble() }
-        if (binding.hours29.text.isNotEmpty()) { sumHours += binding.hours29.text.toString().toDouble() }
-        if (binding.hours30.text.isNotEmpty()) { sumHours += binding.hours30.text.toString().toDouble() }
+        if (binding.hours1.text.isNotEmpty()) { currentSumHours += binding.hours1.text.toString().toDouble() }
+        if (binding.hours2.text.isNotEmpty()) { currentSumHours += binding.hours2.text.toString().toDouble() }
+        if (binding.hours3.text.isNotEmpty()) { currentSumHours += binding.hours3.text.toString().toDouble() }
+        if (binding.hours4.text.isNotEmpty()) { currentSumHours += binding.hours4.text.toString().toDouble() }
+        if (binding.hours5.text.isNotEmpty()) { currentSumHours += binding.hours5.text.toString().toDouble() }
+        if (binding.hours6.text.isNotEmpty()) { currentSumHours += binding.hours6.text.toString().toDouble() }
+        if (binding.hours7.text.isNotEmpty()) { currentSumHours += binding.hours7.text.toString().toDouble() }
+        if (binding.hours8.text.isNotEmpty()) { currentSumHours += binding.hours8.text.toString().toDouble() }
+        if (binding.hours9.text.isNotEmpty()) { currentSumHours += binding.hours9.text.toString().toDouble() }
+        if (binding.hours10.text.isNotEmpty()) { currentSumHours += binding.hours10.text.toString().toDouble() }
+        if (binding.hours11.text.isNotEmpty()) { currentSumHours += binding.hours11.text.toString().toDouble() }
+        if (binding.hours12.text.isNotEmpty()) { currentSumHours += binding.hours12.text.toString().toDouble() }
+        if (binding.hours13.text.isNotEmpty()) { currentSumHours += binding.hours13.text.toString().toDouble() }
+        if (binding.hours14.text.isNotEmpty()) { currentSumHours += binding.hours14.text.toString().toDouble() }
+        if (binding.hours15.text.isNotEmpty()) { currentSumHours += binding.hours15.text.toString().toDouble() }
+        if (binding.hours16.text.isNotEmpty()) { currentSumHours += binding.hours16.text.toString().toDouble() }
+        if (binding.hours17.text.isNotEmpty()) { currentSumHours += binding.hours17.text.toString().toDouble() }
+        if (binding.hours18.text.isNotEmpty()) { currentSumHours += binding.hours18.text.toString().toDouble() }
+        if (binding.hours19.text.isNotEmpty()) { currentSumHours += binding.hours19.text.toString().toDouble() }
+        if (binding.hours20.text.isNotEmpty()) { currentSumHours += binding.hours20.text.toString().toDouble() }
+        if (binding.hours21.text.isNotEmpty()) { currentSumHours += binding.hours21.text.toString().toDouble() }
+        if (binding.hours22.text.isNotEmpty()) { currentSumHours += binding.hours22.text.toString().toDouble() }
+        if (binding.hours23.text.isNotEmpty()) { currentSumHours += binding.hours23.text.toString().toDouble() }
+        if (binding.hours24.text.isNotEmpty()) { currentSumHours += binding.hours24.text.toString().toDouble() }
+        if (binding.hours25.text.isNotEmpty()) { currentSumHours += binding.hours25.text.toString().toDouble() }
+        if (binding.hours26.text.isNotEmpty()) { currentSumHours += binding.hours26.text.toString().toDouble() }
+        if (binding.hours27.text.isNotEmpty()) { currentSumHours += binding.hours27.text.toString().toDouble() }
+        if (binding.hours28.text.isNotEmpty()) { currentSumHours += binding.hours28.text.toString().toDouble() }
+        if (binding.hours29.text.isNotEmpty()) { currentSumHours += binding.hours29.text.toString().toDouble() }
+        if (binding.hours30.text.isNotEmpty()) { currentSumHours += binding.hours30.text.toString().toDouble() }
 
-        binding.outputTotalHours.text = sumHours.toString()
+        binding.outputTotalHours.text = currentSumHours.toString()
+        viewModel.setHours(0, currentSumHours.toString())
 
     }
 
@@ -293,7 +294,6 @@ class InputPartners : Fragment() {
         viewModel.setHours(29, binding.hours29.text.toString())
         viewModel.setHours(30, binding.hours30.text.toString())
     }
-
 
     override fun onDestroy() {
         super.onDestroy()

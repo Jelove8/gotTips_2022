@@ -140,9 +140,11 @@ class SharedViewModel : ViewModel() {
     private val hours28: MutableLiveData<String> by lazy { MutableLiveData<String>() }
     private val hours29: MutableLiveData<String> by lazy { MutableLiveData<String>() }
     private val hours30: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val totalHours: MutableLiveData<String> by lazy { MutableLiveData<String>() }
 
     fun setHours (nameNumber: Int, newHours: String) {
         when (nameNumber) {
+            0 -> {totalHours.value = newHours}
             1 -> {hours1.value = newHours}
             2 -> {hours2.value = newHours}
             3 -> {hours3.value = newHours}
@@ -214,12 +216,30 @@ class SharedViewModel : ViewModel() {
 
 
     //Variables & Functions for amountBills
-    private val amountOnes: MutableLiveData<Int> by lazy { MutableLiveData<Int>() }
-    private val amountTwos: MutableLiveData<Int> by lazy { MutableLiveData<Int>() }
-    private val amountFives: MutableLiveData<Int> by lazy { MutableLiveData<Int>() }
-    private val amountTens: MutableLiveData<Int> by lazy { MutableLiveData<Int>() }
-    private val amountTwenties: MutableLiveData<Int> by lazy { MutableLiveData<Int>() }
-    private val totalTips: MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
+    private val amountOnes: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val amountTwos: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val amountFives: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val amountTens: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val amountTwenties: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+    private val totalTips: MutableLiveData<String> by lazy { MutableLiveData<String>() }
 
-
+    fun setBills(ones: String, twos: String, fives: String, tens: String, twenties: String) {
+        amountOnes.value = ones
+        amountTwos.value = twos
+        amountFives.value = fives
+        amountTens.value = tens
+        amountTwenties.value = twenties
+    }
+    fun setTotalTips(currentTotalTips: String) { totalTips.value = currentTotalTips }
+    fun getBills(billType: Int): String {
+        return when (billType) {
+            0 -> { totalTips.value.toString() }
+            1 -> { amountOnes.value.toString() }
+            2 -> { amountTwos.value.toString() }
+            5 -> { amountFives.value.toString() }
+            10 -> { amountTens.value.toString() }
+            20 -> { amountTwenties.value.toString() }
+            else -> {  "Error" }
+        }
+    }
 }
