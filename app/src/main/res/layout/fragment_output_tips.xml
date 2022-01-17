@@ -43,813 +43,707 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/partner1"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+            <LinearLayout
+                android:id="@+id/columnNames"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/partner2"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner1"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner1"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner3"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner2"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner2"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner4"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner3"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner3"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner5"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner4"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner4"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner6"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner5"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner5"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner7"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner6"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner6"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner8"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner7"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner7"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner9"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner8"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner8"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner10"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner9"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner9"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner11"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner10"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner10"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner12"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner11"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner11"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner13"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner12"
-                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/partner12"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner14"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner13"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner13"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/partner15"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner14"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner14"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner16"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner15"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/partner15"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner17"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner16"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner16"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/partner18"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner17"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner17"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner19"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner18"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner18"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner20"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner19"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner19"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner21"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner20"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/partner20"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner22"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner21"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner21"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/partner23"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner22"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner22"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner24"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner23"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner23"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner25"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner24"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner24"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner26"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner25"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/partner25"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner27"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner26"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner26"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/partner28"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner27"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner27"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner29"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner28"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner28"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner30"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner29"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner29"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/partner_blank"
-                android:layout_width="256dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/enter_new_partner"
-                android:inputType="text"
-                android:textAlignment="textStart"
-                android:textSize="20sp"
-                android:visibility="invisible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/partner30"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/partner30"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips1"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
+                <EditText
+                    android:id="@+id/partner_blank"
+                    android:layout_width="256dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/enter_new_partner"
+                    android:inputType="text"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:visibility="invisible"
+                    tools:ignore="TextContrastCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/columnTips"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
-                android:id="@+id/tips2"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips1"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips1"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/tips3"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips2"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips2"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips4"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips3"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips3"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
-            <EditText
-                android:id="@+id/tips5"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips4"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips4"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips6"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips5"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips5"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips7"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips6"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips6"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips8"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips7"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips7"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips9"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips8"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips8"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips10"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips9"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips9"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips11"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips10"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips10"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips12"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips11"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips11"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips13"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips12"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips12"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips14"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips13"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips13"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips15"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips14"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips14"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips16"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips15"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips15"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips17"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips16"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips16"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips18"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips17"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips17"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips19"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips18"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips18"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips20"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips19"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips19"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips21"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips20"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips20"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips22"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips21"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips21"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips23"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips22"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips22"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips24"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips23"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips23"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips25"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips24"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips24"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips26"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips25"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips25"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips27"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips26"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips26"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips28"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips27"
-                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                <EditText
+                    android:id="@+id/tips27"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips29"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips28"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips28"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-            <EditText
-                android:id="@+id/tips30"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/empty"
-                android:inputType="none|numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips29"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips29"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/tips_blank"
-                android:layout_width="128dp"
-                android:layout_height="56dp"
-                android:autofillHints="name"
-                android:hint="@string/zero_dot_zero_zero"
-                android:inputType="numberDecimal"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:visibility="invisible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tips30"
-                tools:ignore="TextContrastCheck" />
+                <EditText
+                    android:id="@+id/tips30"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/empty"
+                    android:inputType="none|numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <EditText
+                    android:id="@+id/tips_blank"
+                    android:layout_width="128dp"
+                    android:layout_height="56dp"
+                    android:autofillHints="name"
+                    android:hint="@string/zero_dot_zero_zero"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:visibility="invisible"
+                    tools:ignore="TextContrastCheck" />
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

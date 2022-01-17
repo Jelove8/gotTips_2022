@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.forEach
 import androidx.fragment.app.activityViewModels
 import com.example.gottips_2022.databinding.FragmentOutputTipsBinding
 import com.example.gottips_2022.model.SharedViewModel
@@ -25,6 +26,11 @@ class OutputTips : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Populating partnerNames from SharedViewModel
+        binding.columnNames.forEach {
+
+        }
+
+
         binding.partner1.setText(viewModel3.getName(1))
         binding.partner2.setText(viewModel3.getName(2))
         binding.partner3.setText(viewModel3.getName(3))
@@ -58,36 +64,39 @@ class OutputTips : Fragment() {
 
 
         // Calculating partnerTips
-        binding.tips1.setText(viewModel3.getTips(1))
-        binding.tips2.setText(viewModel3.getTips(2))
-        binding.tips3.setText(viewModel3.getTips(3))
-        binding.tips4.setText(viewModel3.getTips(4))
-        binding.tips5.setText(viewModel3.getTips(5))
-        binding.tips6.setText(viewModel3.getTips(6))
-        binding.tips7.setText(viewModel3.getTips(7))
-        binding.tips8.setText(viewModel3.getTips(8))
-        binding.tips9.setText(viewModel3.getTips(9))
-        binding.tips10.setText(viewModel3.getTips(10))
-        binding.tips11.setText(viewModel3.getTips(11))
-        binding.tips12.setText(viewModel3.getTips(12))
-        binding.tips13.setText(viewModel3.getTips(13))
-        binding.tips14.setText(viewModel3.getTips(14))
-        binding.tips15.setText(viewModel3.getTips(15))
-        binding.tips16.setText(viewModel3.getTips(16))
-        binding.tips17.setText(viewModel3.getTips(17))
-        binding.tips18.setText(viewModel3.getTips(18))
-        binding.tips19.setText(viewModel3.getTips(19))
-        binding.tips20.setText(viewModel3.getTips(20))
-        binding.tips21.setText(viewModel3.getTips(21))
-        binding.tips22.setText(viewModel3.getTips(22))
-        binding.tips23.setText(viewModel3.getTips(23))
-        binding.tips24.setText(viewModel3.getTips(24))
-        binding.tips25.setText(viewModel3.getTips(25))
-        binding.tips26.setText(viewModel3.getTips(26))
-        binding.tips27.setText(viewModel3.getTips(27))
-        binding.tips28.setText(viewModel3.getTips(28))
-        binding.tips29.setText(viewModel3.getTips(29))
-        binding.tips30.setText(viewModel3.getTips(30))
+        binding.tips1.setText(viewModel3.getTipsInitial(1))
+        binding.tips2.setText(viewModel3.getTipsInitial(2))
+        binding.tips3.setText(viewModel3.getTipsInitial(3))
+        binding.tips4.setText(viewModel3.getTipsInitial(4))
+        binding.tips5.setText(viewModel3.getTipsInitial(5))
+        binding.tips6.setText(viewModel3.getTipsInitial(6))
+        binding.tips7.setText(viewModel3.getTipsInitial(7))
+        binding.tips8.setText(viewModel3.getTipsInitial(8))
+        binding.tips9.setText(viewModel3.getTipsInitial(9))
+        binding.tips10.setText(viewModel3.getTipsInitial(10))
+        binding.tips11.setText(viewModel3.getTipsInitial(11))
+        binding.tips12.setText(viewModel3.getTipsInitial(12))
+        binding.tips13.setText(viewModel3.getTipsInitial(13))
+        binding.tips14.setText(viewModel3.getTipsInitial(14))
+        binding.tips15.setText(viewModel3.getTipsInitial(15))
+        binding.tips16.setText(viewModel3.getTipsInitial(16))
+        binding.tips17.setText(viewModel3.getTipsInitial(17))
+        binding.tips18.setText(viewModel3.getTipsInitial(18))
+        binding.tips19.setText(viewModel3.getTipsInitial(19))
+        binding.tips20.setText(viewModel3.getTipsInitial(20))
+        binding.tips21.setText(viewModel3.getTipsInitial(21))
+        binding.tips22.setText(viewModel3.getTipsInitial(22))
+        binding.tips23.setText(viewModel3.getTipsInitial(23))
+        binding.tips24.setText(viewModel3.getTipsInitial(24))
+        binding.tips25.setText(viewModel3.getTipsInitial(25))
+        binding.tips26.setText(viewModel3.getTipsInitial(26))
+        binding.tips27.setText(viewModel3.getTipsInitial(27))
+        binding.tips28.setText(viewModel3.getTipsInitial(28))
+        binding.tips29.setText(viewModel3.getTipsInitial(29))
+        binding.tips30.setText(viewModel3.getTipsInitial(30))
+
+        //Rounding partnerTips
+
 
         //Views that display partnerTips && corresponding partnerName is blank will have their content set to null.
         if (binding.partner1.text.isNullOrEmpty()) { binding.tips1.setText(R.string.empty)}
