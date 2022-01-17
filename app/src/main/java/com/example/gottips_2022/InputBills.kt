@@ -23,6 +23,21 @@ class InputBills : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //Getting amountBills from SharedViewModel
+        binding.inputOnes.setText(viewModel2.getBills(1))
+        binding.inputTwos.setText(viewModel2.getBills(2))
+        binding.inputFives.setText(viewModel2.getBills(5))
+        binding.inputTens.setText(viewModel2.getBills(10))
+        binding.inputTwenties.setText(viewModel2.getBills(20))
+
+        //If any amountBill contains the string "null", the EditText.text is set to null (as in "empty", not as a string).
+        //This is so that the android:Hint is can be displayed.
+        if (binding.inputOnes.text.toString().contentEquals("null")) { binding.inputOnes.text = null }
+        if (binding.inputTwos.text.toString().contentEquals("null")) { binding.inputTwos.text = null }
+        if (binding.inputFives.text.toString().contentEquals("null")) { binding.inputFives.text = null }
+        if (binding.inputTens.text.toString().contentEquals("null")) { binding.inputTens.text = null }
+        if (binding.inputTwenties.text.toString().contentEquals("null")) { binding.inputTwenties.text = null }
     }
 
     override fun onDestroyView() {
