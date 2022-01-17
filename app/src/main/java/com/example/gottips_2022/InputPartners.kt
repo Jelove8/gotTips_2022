@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.gottips_2022.databinding.FragmentInputPartnersBinding
@@ -14,8 +15,43 @@ class InputPartners : Fragment() {
     private val viewModel: SharedViewModel by activityViewModels()
     private var binding1: FragmentInputPartnersBinding? = null
     private val binding get() = binding1!!
+    private var sumHours = 0.00
 
-    fun calculateSumHours() {
+    private fun calculateSumHours() {
+        sumHours = 0.00
+
+        if (binding.hours1.text.isNotEmpty()) { sumHours += binding.hours1.text.toString().toDouble() }
+        if (binding.hours2.text.isNotEmpty()) { sumHours += binding.hours2.text.toString().toDouble() }
+        if (binding.hours3.text.isNotEmpty()) { sumHours += binding.hours3.text.toString().toDouble() }
+        if (binding.hours4.text.isNotEmpty()) { sumHours += binding.hours4.text.toString().toDouble() }
+        if (binding.hours5.text.isNotEmpty()) { sumHours += binding.hours5.text.toString().toDouble() }
+        if (binding.hours6.text.isNotEmpty()) { sumHours += binding.hours6.text.toString().toDouble() }
+        if (binding.hours7.text.isNotEmpty()) { sumHours += binding.hours7.text.toString().toDouble() }
+        if (binding.hours8.text.isNotEmpty()) { sumHours += binding.hours8.text.toString().toDouble() }
+        if (binding.hours9.text.isNotEmpty()) { sumHours += binding.hours9.text.toString().toDouble() }
+        if (binding.hours10.text.isNotEmpty()) { sumHours += binding.hours10.text.toString().toDouble() }
+        if (binding.hours11.text.isNotEmpty()) { sumHours += binding.hours11.text.toString().toDouble() }
+        if (binding.hours12.text.isNotEmpty()) { sumHours += binding.hours12.text.toString().toDouble() }
+        if (binding.hours13.text.isNotEmpty()) { sumHours += binding.hours13.text.toString().toDouble() }
+        if (binding.hours14.text.isNotEmpty()) { sumHours += binding.hours14.text.toString().toDouble() }
+        if (binding.hours15.text.isNotEmpty()) { sumHours += binding.hours15.text.toString().toDouble() }
+        if (binding.hours16.text.isNotEmpty()) { sumHours += binding.hours16.text.toString().toDouble() }
+        if (binding.hours17.text.isNotEmpty()) { sumHours += binding.hours17.text.toString().toDouble() }
+        if (binding.hours18.text.isNotEmpty()) { sumHours += binding.hours18.text.toString().toDouble() }
+        if (binding.hours19.text.isNotEmpty()) { sumHours += binding.hours19.text.toString().toDouble() }
+        if (binding.hours20.text.isNotEmpty()) { sumHours += binding.hours20.text.toString().toDouble() }
+        if (binding.hours21.text.isNotEmpty()) { sumHours += binding.hours21.text.toString().toDouble() }
+        if (binding.hours22.text.isNotEmpty()) { sumHours += binding.hours22.text.toString().toDouble() }
+        if (binding.hours23.text.isNotEmpty()) { sumHours += binding.hours23.text.toString().toDouble() }
+        if (binding.hours24.text.isNotEmpty()) { sumHours += binding.hours24.text.toString().toDouble() }
+        if (binding.hours25.text.isNotEmpty()) { sumHours += binding.hours25.text.toString().toDouble() }
+        if (binding.hours26.text.isNotEmpty()) { sumHours += binding.hours26.text.toString().toDouble() }
+        if (binding.hours27.text.isNotEmpty()) { sumHours += binding.hours27.text.toString().toDouble() }
+        if (binding.hours28.text.isNotEmpty()) { sumHours += binding.hours28.text.toString().toDouble() }
+        if (binding.hours29.text.isNotEmpty()) { sumHours += binding.hours29.text.toString().toDouble() }
+        if (binding.hours30.text.isNotEmpty()) { sumHours += binding.hours30.text.toString().toDouble() }
+
+        binding.outputTotalHours.text = sumHours.toString()
 
     }
 
@@ -154,6 +190,39 @@ class InputPartners : Fragment() {
         if (binding.hours28.text.toString().contentEquals("null")) { binding.hours28.text = null }
         if (binding.hours29.text.toString().contentEquals("null")) { binding.hours29.text = null }
         if (binding.hours30.text.toString().contentEquals("null")) { binding.hours30.text = null }
+
+        // Recalculating sumHours after every change in hours_EditTexts.
+        calculateSumHours()
+        binding.hours1.doAfterTextChanged { calculateSumHours() }
+        binding.hours2.doAfterTextChanged { calculateSumHours() }
+        binding.hours3.doAfterTextChanged { calculateSumHours() }
+        binding.hours4.doAfterTextChanged { calculateSumHours() }
+        binding.hours5.doAfterTextChanged { calculateSumHours() }
+        binding.hours6.doAfterTextChanged { calculateSumHours() }
+        binding.hours7.doAfterTextChanged { calculateSumHours() }
+        binding.hours8.doAfterTextChanged { calculateSumHours() }
+        binding.hours9.doAfterTextChanged { calculateSumHours() }
+        binding.hours10.doAfterTextChanged { calculateSumHours() }
+        binding.hours11.doAfterTextChanged { calculateSumHours() }
+        binding.hours12.doAfterTextChanged { calculateSumHours() }
+        binding.hours13.doAfterTextChanged { calculateSumHours() }
+        binding.hours14.doAfterTextChanged { calculateSumHours() }
+        binding.hours15.doAfterTextChanged { calculateSumHours() }
+        binding.hours16.doAfterTextChanged { calculateSumHours() }
+        binding.hours17.doAfterTextChanged { calculateSumHours() }
+        binding.hours18.doAfterTextChanged { calculateSumHours() }
+        binding.hours19.doAfterTextChanged { calculateSumHours() }
+        binding.hours20.doAfterTextChanged { calculateSumHours() }
+        binding.hours21.doAfterTextChanged { calculateSumHours() }
+        binding.hours22.doAfterTextChanged { calculateSumHours() }
+        binding.hours23.doAfterTextChanged { calculateSumHours() }
+        binding.hours24.doAfterTextChanged { calculateSumHours() }
+        binding.hours25.doAfterTextChanged { calculateSumHours() }
+        binding.hours26.doAfterTextChanged { calculateSumHours() }
+        binding.hours27.doAfterTextChanged { calculateSumHours() }
+        binding.hours28.doAfterTextChanged { calculateSumHours() }
+        binding.hours29.doAfterTextChanged { calculateSumHours() }
+        binding.hours30.doAfterTextChanged { calculateSumHours() }
     }
 
     override fun onDestroyView() {

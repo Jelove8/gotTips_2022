@@ -844,7 +844,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/output_TotalHours"
+        android:id="@+id/outputTotalHours"
         android:layout_width="128dp"
         android:layout_height="56dp"
         android:fontFamily="sans-serif-condensed-medium"
