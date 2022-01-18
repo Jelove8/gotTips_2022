@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 
 class SharedViewModel : ViewModel() {
 
+<<<<<<< Updated upstream
     //Variables & Functions for partnerNames
     private val listOfPartnerNames: MutableLiveData<ArrayList<String>> by lazy { MutableLiveData<ArrayList<String>>() }
 
@@ -15,10 +16,24 @@ class SharedViewModel : ViewModel() {
     }
     fun setPartnerNames(newListOfNames: ArrayList<String>) {
         listOfPartnerNames.value = newListOfNames
+=======
+    //partnerNames
+
+    private val listOfNames: MutableLiveData<MutableList<String>> by lazy { MutableLiveData<MutableList<String>>() }
+    fun setNames(newListOfNames: MutableList<String>) {
+        listOfNames.value = newListOfNames
+    }
+    fun getName(): MutableList<String>? {
+        return listOfNames.value
+>>>>>>> Stashed changes
     }
 
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     //Variables & Functions for partnerHours
     private val hours1: MutableLiveData<String> by lazy { MutableLiveData<String>() }
     private val hours2: MutableLiveData<String> by lazy { MutableLiveData<String>() }
@@ -220,7 +235,10 @@ class SharedViewModel : ViewModel() {
     private val tips30Rounded: MutableLiveData<Int> by lazy { MutableLiveData<Int>() }
     private val listOfRoundedTips: MutableLiveData<ArrayList<Int>> by lazy { MutableLiveData<ArrayList<Int>>() }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     private fun getTipRate(): Double {
 
         var currentTipRate = 0.00

@@ -71,9 +71,42 @@ class InputPartners : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Getting partnerNames from ShareViewModel.
+<<<<<<< Updated upstream
         viewModel.setPartnerNames(currentListOfNames)
         binding.partner1.setText(viewModel.getPartnerName(1))
 
+=======
+        binding.partner1.setText(viewModel.getName()?.get(1))
+        binding.partner2.setText(viewModel.getName()?.get(2))
+        binding.partner3.setText(viewModel.getName()?.get(3))
+        binding.partner4.setText(viewModel.getName()?.get(4))
+        binding.partner5.setText(viewModel.getName()?.get(5))
+        binding.partner6.setText(viewModel.getName()?.get(6))
+        binding.partner7.setText(viewModel.getName()?.get(7))
+        binding.partner8.setText(viewModel.getName()?.get(8))
+        binding.partner9.setText(viewModel.getName()?.get(9))
+        binding.partner10.setText(viewModel.getName()?.get(10))
+        binding.partner11.setText(viewModel.getName()?.get(11))
+        binding.partner12.setText(viewModel.getName()?.get(12))
+        binding.partner13.setText(viewModel.getName()?.get(13))
+        binding.partner14.setText(viewModel.getName()?.get(14))
+        binding.partner15.setText(viewModel.getName()?.get(15))
+        binding.partner16.setText(viewModel.getName()?.get(16))
+        binding.partner17.setText(viewModel.getName()?.get(17))
+        binding.partner18.setText(viewModel.getName()?.get(18))
+        binding.partner19.setText(viewModel.getName()?.get(19))
+        binding.partner20.setText(viewModel.getName()?.get(20))
+        binding.partner21.setText(viewModel.getName()?.get(21))
+        binding.partner22.setText(viewModel.getName()?.get(22))
+        binding.partner23.setText(viewModel.getName()?.get(23))
+        binding.partner24.setText(viewModel.getName()?.get(24))
+        binding.partner25.setText(viewModel.getName()?.get(25))
+        binding.partner26.setText(viewModel.getName()?.get(26))
+        binding.partner27.setText(viewModel.getName()?.get(27))
+        binding.partner28.setText(viewModel.getName()?.get(28))
+        binding.partner29.setText(viewModel.getName()?.get(29))
+        binding.partner30.setText(viewModel.getName()?.get(30))
+>>>>>>> Stashed changes
 
 
         // Getting partnerHours from ShareViewModel.
@@ -110,36 +143,7 @@ class InputPartners : Fragment() {
 
         //If any partnerName &| partnerHour contains the string "null", the EditText.text is set to null (as in "empty", not as a string).
         //This is so that the android:Hint is can be displayed.
-        if (binding.partner1.text.toString().contentEquals("null")) { binding.partner1.text = null }
-        if (binding.partner2.text.toString().contentEquals("null")) { binding.partner2.text = null }
-        if (binding.partner3.text.toString().contentEquals("null")) { binding.partner3.text = null }
-        if (binding.partner4.text.toString().contentEquals("null")) { binding.partner4.text = null }
-        if (binding.partner5.text.toString().contentEquals("null")) { binding.partner5.text = null }
-        if (binding.partner6.text.toString().contentEquals("null")) { binding.partner6.text = null }
-        if (binding.partner7.text.toString().contentEquals("null")) { binding.partner7.text = null }
-        if (binding.partner8.text.toString().contentEquals("null")) { binding.partner8.text = null }
-        if (binding.partner9.text.toString().contentEquals("null")) { binding.partner9.text = null }
-        if (binding.partner10.text.toString().contentEquals("null")) { binding.partner10.text = null }
-        if (binding.partner11.text.toString().contentEquals("null")) { binding.partner11.text = null }
-        if (binding.partner12.text.toString().contentEquals("null")) { binding.partner12.text = null }
-        if (binding.partner13.text.toString().contentEquals("null")) { binding.partner13.text = null }
-        if (binding.partner14.text.toString().contentEquals("null")) { binding.partner14.text = null }
-        if (binding.partner15.text.toString().contentEquals("null")) { binding.partner15.text = null }
-        if (binding.partner16.text.toString().contentEquals("null")) { binding.partner16.text = null }
-        if (binding.partner17.text.toString().contentEquals("null")) { binding.partner17.text = null }
-        if (binding.partner18.text.toString().contentEquals("null")) { binding.partner18.text = null }
-        if (binding.partner19.text.toString().contentEquals("null")) { binding.partner19.text = null }
-        if (binding.partner20.text.toString().contentEquals("null")) { binding.partner20.text = null }
-        if (binding.partner21.text.toString().contentEquals("null")) { binding.partner21.text = null }
-        if (binding.partner22.text.toString().contentEquals("null")) { binding.partner22.text = null }
-        if (binding.partner23.text.toString().contentEquals("null")) { binding.partner23.text = null }
-        if (binding.partner24.text.toString().contentEquals("null")) { binding.partner24.text = null }
-        if (binding.partner25.text.toString().contentEquals("null")) { binding.partner25.text = null }
-        if (binding.partner26.text.toString().contentEquals("null")) { binding.partner26.text = null }
-        if (binding.partner27.text.toString().contentEquals("null")) { binding.partner27.text = null }
-        if (binding.partner28.text.toString().contentEquals("null")) { binding.partner28.text = null }
-        if (binding.partner29.text.toString().contentEquals("null")) { binding.partner29.text = null }
-        if (binding.partner30.text.toString().contentEquals("null")) { binding.partner30.text = null }
+
 
         if (binding.hours1.text.toString().contentEquals("null")) { binding.hours1.text = null }
         if (binding.hours2.text.toString().contentEquals("null")) { binding.hours2.text = null }
@@ -210,12 +214,24 @@ class InputPartners : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
 
+<<<<<<< Updated upstream
         // Transferring partnerNames to SharedViewModel.
         currentListOfNames[1] = binding.partner1.text.toString()
 
 
 
         viewModel.setPartnerNames(currentListOfNames)
+=======
+        // Transferring partnerNames to SharedViewModel
+        val currentListOfNames = mutableListOf("newListOfNames...", binding.partner1.text.toString(), binding.partner1.text.toString(), binding.partner2.text.toString(), binding.partner3.text.toString(), binding.partner4.text.toString(), binding.partner5.text.toString(),
+            binding.partner6.text.toString(), binding.partner7.text.toString(), binding.partner8.text.toString(), binding.partner9.text.toString(), binding.partner10.text.toString(),
+            binding.partner11.text.toString(), binding.partner12.text.toString(), binding.partner13.text.toString(), binding.partner14.text.toString(), binding.partner15.text.toString(),
+            binding.partner16.text.toString(), binding.partner17.text.toString(), binding.partner18.text.toString(), binding.partner19.text.toString(), binding.partner20.text.toString(),
+            binding.partner21.text.toString(), binding.partner22.text.toString(), binding.partner23.text.toString(), binding.partner24.text.toString(), binding.partner25.text.toString(),
+            binding.partner26.text.toString(), binding.partner27.text.toString(), binding.partner28.text.toString(), binding.partner29.text.toString(), binding.partner30.text.toString() )
+
+        viewModel.setNames(currentListOfNames)
+>>>>>>> Stashed changes
 
 
         // Transferring partnerHours to SharedViewModel

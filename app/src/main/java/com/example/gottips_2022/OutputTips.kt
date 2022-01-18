@@ -26,6 +26,7 @@ class OutputTips : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Populating partnerNames from SharedViewModel
+<<<<<<< Updated upstream
         binding.columnNames.forEach {
 
         }
@@ -60,6 +61,9 @@ class OutputTips : Fragment() {
         binding.partner28.setText(viewModel3.getPartnerName(28))
         binding.partner29.setText(viewModel3.getPartnerName(29))
         binding.partner30.setText(viewModel3.getPartnerName(30))
+=======
+
+>>>>>>> Stashed changes
 
 
         // Calculating partnerTips
