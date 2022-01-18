@@ -10,11 +10,17 @@ import androidx.fragment.app.activityViewModels
 import com.example.gottips_2022.databinding.FragmentInputPartnersBinding
 import com.example.gottips_2022.model.SharedViewModel
 
+
+
+
 class InputPartners : Fragment() {
 
     private val viewModel: SharedViewModel by activityViewModels()
     private var binding1: FragmentInputPartnersBinding? = null
     private val binding get() = binding1!!
+    private var currentListOfNames = arrayListOf("Initialize partners here...",viewModel.getPartnerName(1), "null", "null", "null", "null", "null", "null", "null", "null", "null",
+        "null", "null", "null", "null", "null", "null", "null", "null", "null", "null",
+        "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", )
     private var currentSumHours = 0.00
 
     private fun calculateSumHours() {
@@ -65,36 +71,10 @@ class InputPartners : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Getting partnerNames from ShareViewModel.
-        binding.partner1.setText(viewModel.getName(1))
-        binding.partner2.setText(viewModel.getName(2))
-        binding.partner3.setText(viewModel.getName(3))
-        binding.partner4.setText(viewModel.getName(4))
-        binding.partner5.setText(viewModel.getName(5))
-        binding.partner6.setText(viewModel.getName(6))
-        binding.partner7.setText(viewModel.getName(7))
-        binding.partner8.setText(viewModel.getName(8))
-        binding.partner9.setText(viewModel.getName(9))
-        binding.partner10.setText(viewModel.getName(10))
-        binding.partner11.setText(viewModel.getName(11))
-        binding.partner12.setText(viewModel.getName(12))
-        binding.partner13.setText(viewModel.getName(13))
-        binding.partner14.setText(viewModel.getName(14))
-        binding.partner15.setText(viewModel.getName(15))
-        binding.partner16.setText(viewModel.getName(16))
-        binding.partner17.setText(viewModel.getName(17))
-        binding.partner18.setText(viewModel.getName(18))
-        binding.partner19.setText(viewModel.getName(19))
-        binding.partner20.setText(viewModel.getName(20))
-        binding.partner21.setText(viewModel.getName(21))
-        binding.partner22.setText(viewModel.getName(22))
-        binding.partner23.setText(viewModel.getName(23))
-        binding.partner24.setText(viewModel.getName(24))
-        binding.partner25.setText(viewModel.getName(25))
-        binding.partner26.setText(viewModel.getName(26))
-        binding.partner27.setText(viewModel.getName(27))
-        binding.partner28.setText(viewModel.getName(28))
-        binding.partner29.setText(viewModel.getName(29))
-        binding.partner30.setText(viewModel.getName(30))
+        viewModel.setPartnerNames(currentListOfNames)
+        binding.partner1.setText(viewModel.getPartnerName(1))
+
+
 
         // Getting partnerHours from ShareViewModel.
         binding.hours1.setText(viewModel.getHours(1))
@@ -224,42 +204,18 @@ class InputPartners : Fragment() {
         binding.hours28.doAfterTextChanged { calculateSumHours() }
         binding.hours29.doAfterTextChanged { calculateSumHours() }
         binding.hours30.doAfterTextChanged { calculateSumHours() }
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
 
-        // Transferring partnerNames to SharedViewModel
-        viewModel.setName(1, binding.partner1.text.toString())
-        viewModel.setName(2, binding.partner2.text.toString())
-        viewModel.setName(3, binding.partner3.text.toString())
-        viewModel.setName(4, binding.partner4.text.toString())
-        viewModel.setName(5, binding.partner5.text.toString())
-        viewModel.setName(6, binding.partner6.text.toString())
-        viewModel.setName(7, binding.partner7.text.toString())
-        viewModel.setName(8, binding.partner8.text.toString())
-        viewModel.setName(9, binding.partner9.text.toString())
-        viewModel.setName(10, binding.partner10.text.toString())
-        viewModel.setName(11, binding.partner11.text.toString())
-        viewModel.setName(12, binding.partner12.text.toString())
-        viewModel.setName(13, binding.partner13.text.toString())
-        viewModel.setName(14, binding.partner14.text.toString())
-        viewModel.setName(15, binding.partner15.text.toString())
-        viewModel.setName(16, binding.partner16.text.toString())
-        viewModel.setName(17, binding.partner17.text.toString())
-        viewModel.setName(18, binding.partner18.text.toString())
-        viewModel.setName(19, binding.partner19.text.toString())
-        viewModel.setName(20, binding.partner20.text.toString())
-        viewModel.setName(21, binding.partner21.text.toString())
-        viewModel.setName(22, binding.partner22.text.toString())
-        viewModel.setName(23, binding.partner23.text.toString())
-        viewModel.setName(24, binding.partner24.text.toString())
-        viewModel.setName(25, binding.partner25.text.toString())
-        viewModel.setName(26, binding.partner26.text.toString())
-        viewModel.setName(27, binding.partner27.text.toString())
-        viewModel.setName(28, binding.partner28.text.toString())
-        viewModel.setName(29, binding.partner29.text.toString())
-        viewModel.setName(30, binding.partner30.text.toString())
+        // Transferring partnerNames to SharedViewModel.
+        currentListOfNames[1] = binding.partner1.text.toString()
+
+
+
+        viewModel.setPartnerNames(currentListOfNames)
 
 
         // Transferring partnerHours to SharedViewModel
