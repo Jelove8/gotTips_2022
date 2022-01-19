@@ -19,18 +19,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/header_dollar_amount"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/amount"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/header_ones"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
@@ -90,6 +78,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_tens" />
 
+    <TextView
+        android:id="@+id/header_dollar_amount"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/amount"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/inputOnes"
         android:layout_width="128dp"
@@ -105,7 +105,7 @@
         tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <EditText
-        android:id="@+id/inputTwenties"
+        android:id="@+id/inputTwos"
         android:layout_width="128dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
@@ -115,21 +115,7 @@
         android:textAlignment="center"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputTens"
-        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
-
-    <EditText
-        android:id="@+id/inputTens"
-        android:layout_width="128dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="16dp"
-        android:autofillHints="name"
-        android:hint="@string/zero_dot_zero_zero"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputFives"
+        app:layout_constraintTop_toBottomOf="@+id/inputOnes"
         tools:ignore="TextContrastCheck" />
 
     <EditText
@@ -147,7 +133,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/inputTwos"
+        android:id="@+id/inputTens"
         android:layout_width="128dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
@@ -157,8 +143,22 @@
         android:textAlignment="center"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputOnes"
+        app:layout_constraintTop_toBottomOf="@+id/inputFives"
         tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/inputTwenties"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="name"
+        android:hint="@string/zero_dot_zero_zero"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTens"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/header_TotalBills"
@@ -188,4 +188,5 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputTwenties" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

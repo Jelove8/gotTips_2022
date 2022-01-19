@@ -15,19 +15,19 @@ class InputBills : Fragment() {
     private val viewModel2: SharedViewModel by activityViewModels()
     private var binding2: FragmentInputBillsBinding? = null
     private val binding get() = binding2!!
-    private var currentTotalTips = 0.00
 
-    private fun calculateTotalTips() {
+    private fun calculateTotalBills() {
 
-        currentTotalTips = 0.00
-        if (binding.inputOnes.text.isNotEmpty()) { currentTotalTips += binding.inputOnes.text.toString().toDouble() }
-        if (binding.inputTwos.text.isNotEmpty()) { currentTotalTips += binding.inputTwos.text.toString().toDouble() }
-        if (binding.inputFives.text.isNotEmpty()) { currentTotalTips += binding.inputFives.text.toString().toDouble() }
-        if (binding.inputTens.text.isNotEmpty()) { currentTotalTips += binding.inputTens.text.toString().toDouble() }
-        if (binding.inputTwenties.text.isNotEmpty()) { currentTotalTips += binding.inputTwenties.text.toString().toDouble() }
+        var currentTotalBills = 0.00
+        if (binding.inputOnes.text.isNotEmpty()) { currentTotalBills += binding.inputOnes.text.toString().toDouble() }
+        if (binding.inputTwos.text.isNotEmpty()) { currentTotalBills += binding.inputTwos.text.toString().toDouble() }
+        if (binding.inputFives.text.isNotEmpty()) { currentTotalBills += binding.inputFives.text.toString().toDouble() }
+        if (binding.inputTens.text.isNotEmpty()) { currentTotalBills += binding.inputTens.text.toString().toDouble() }
+        if (binding.inputTwenties.text.isNotEmpty()) { currentTotalBills += binding.inputTwenties.text.toString().toDouble() }
 
-        binding.outputTotalTips.text = currentTotalTips.toString()
-        viewModel2.setTotalTips(currentTotalTips.toString())
+        binding.outputTotalTips.text = currentTotalBills.toString()
+        viewModel2.setTotalBills(currentTotalBills.toString())
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -39,47 +39,28 @@ class InputBills : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Initializing EditText & TotalTips values
-        binding.inputOnes.setText(viewModel2.getBills(1))
-        binding.inputTwos.setText(viewModel2.getBills(2))
-        binding.inputFives.setText(viewModel2.getBills(5))
-        binding.inputTens.setText(viewModel2.getBills(10))
-        binding.inputTwenties.setText(viewModel2.getBills(20))
-        binding.outputTotalTips.text = viewModel2.getBills(0)
-
-        //If any views display the string "null", their text content is set to null.
-        if (binding.inputOnes.text.contains("null")) { binding.inputOnes.text = null }
-        if (binding.inputTwos.text.contains("null")) { binding.inputTwos.text = null }
-        if (binding.inputFives.text.contains("null")) { binding.inputFives.text = null }
-        if (binding.inputTens.text.contains("null")) { binding.inputTens.text = null }
-        if (binding.inputTwenties.text.contains("null")) { binding.inputTwenties.text = null }
-        if (binding.outputTotalTips.text.contains("null")) { binding.outputTotalTips.setText(R.string.zero_dot_zero_zero) }
+        binding.inputOnes.setText(viewModel2.getBills()?.get(0))
+        binding.inputTwos.setText(viewModel2.getBills()?.get(1))
+        binding.inputFives.setText(viewModel2.getBills()?.get(2))
+        binding.inputTens.setText(viewModel2.getBills()?.get(3))
+        binding.inputTwenties.setText(viewModel2.getBills()?.get(4))
 
         //Text Changed Listeners
-        calculateTotalTips()
-        binding.inputOnes.doAfterTextChanged { calculateTotalTips() }
-        binding.inputTwos.doAfterTextChanged { calculateTotalTips() }
-        binding.inputFives.doAfterTextChanged { calculateTotalTips() }
-        binding.inputTens.doAfterTextChanged { calculateTotalTips() }
-        binding.inputTwenties.doAfterTextChanged { calculateTotalTips() }
+        calculateTotalBills()
+        binding.inputOnes.doAfterTextChanged { calculateTotalBills() }
+        binding.inputTwos.doAfterTextChanged { calculateTotalBills() }
+        binding.inputFives.doAfterTextChanged { calculateTotalBills() }
+        binding.inputTens.doAfterTextChanged { calculateTotalBills() }
+        binding.inputTwenties.doAfterTextChanged { calculateTotalBills() }
 
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
 
-        var ones = "0.00"
-        var twos = "0.00"
-        var fives = "0.00"
-        var tens = "0.00"
-        var twenties = "0.00"
+        val currentListOfBills = mutableListOf(binding.inputOnes.text.toString(), binding.inputTwos.text.toString(), binding.inputFives.text.toString(), binding.inputTens.text.toString(), binding.inputTwenties.text.toString())
 
-        if (binding.inputOnes.text.isNotEmpty()) { ones = binding.inputOnes.text.toString() }
-        if (binding.inputTwos.text.isNotEmpty()) { twos = binding.inputTwos.text.toString() }
-        if (binding.inputFives.text.isNotEmpty()) { fives = binding.inputFives.text.toString()  }
-        if (binding.inputTens.text.isNotEmpty()) { tens = binding.inputTens.text.toString()  }
-        if (binding.inputTwenties.text.isNotEmpty()) { twenties = binding.inputTwenties.text.toString() }
-
-        viewModel2.setBills(ones, twos, fives, tens, twenties)
+        viewModel2.setBills(currentListOfBills)
 
 }
 
