@@ -2,6 +2,7 @@ package com.example.gottips_2022.model
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import kotlin.math.roundToInt
 
 class SharedViewModel : ViewModel() {
 
@@ -66,8 +67,12 @@ class SharedViewModel : ViewModel() {
 
         for (i in 0..29) {
 
-            if (listOfHours.value?.get(i).isNullOrEmpty()) { newListOfTips.add(i, 0.00) }
-            else { newListOfTips.add(i, newTipRate * listOfHours.value!![i].toDouble()) }
+            if (listOfHours.value?.get(i).isNullOrEmpty()) {
+                newListOfTips.add(i, 0.00)
+            }
+            else {
+                newListOfTips.add(i, newTipRate * listOfHours.value!![i].toDouble())
+            }
 
         }
 
@@ -78,9 +83,28 @@ class SharedViewModel : ViewModel() {
     }
 
 
+    //Rounding tips for display
+    private val roundedListOfTips: MutableLiveData<MutableList<Int>> by lazy { MutableLiveData<MutableList<Int>>() }
+
+    fun roundTips() {
+
+        val newListOfRoundedTips = mutableListOf<Int>()
+
+        for (i in 0..29) {
+
+            if (listOfTips.value!![i].isNaN()) {
+                newListOfRoundedTips.add(i, 0)
+            }
+            else {
+                newListOfRoundedTips.add(i, listOfTips.value!![i].roundToInt())
+            }
+        }
 
 
-
-
+        roundedListOfTips.value = newListOfRoundedTips
+    }
+    fun getRoundedTips(): MutableList<Int>? {
+        return roundedListOfTips.value
+    }
 
 }
