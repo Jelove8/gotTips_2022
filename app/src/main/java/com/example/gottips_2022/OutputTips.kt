@@ -58,7 +58,7 @@ class OutputTips : Fragment() {
 
 
         // Calculating partnerTips
-        viewModel3.calculateTips()
+        viewModel3.setTips()
         binding.tips1.setText(viewModel3.getTips()!![0].toString())
         binding.tips2.setText(viewModel3.getTips()!![1].toString())
         binding.tips3.setText(viewModel3.getTips()!![2].toString())

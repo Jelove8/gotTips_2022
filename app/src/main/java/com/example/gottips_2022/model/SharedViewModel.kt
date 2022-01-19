@@ -6,17 +6,10 @@ import androidx.lifecycle.ViewModel
 class SharedViewModel : ViewModel() {
 
 
-    // partnerNames
-
+    // Initialized using input from Fragment: InputPartners
     private val listOfNames: MutableLiveData<MutableList<String>> by lazy { MutableLiveData<MutableList<String>>() }
     private val listOfHours: MutableLiveData<MutableList<String>> by lazy { MutableLiveData<MutableList<String>>() }
-    private val listOfBills: MutableLiveData<MutableList<String>> by lazy { MutableLiveData<MutableList<String>>() }
-
     private val totalHours: MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
-    private val totalBills: MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
-
-    private val listOfTips: MutableLiveData<MutableList<Double>> by lazy { MutableLiveData<MutableList<Double>>() }
-    private val tipRate: MutableLiveData<String> by lazy { MutableLiveData<String>() }
 
     fun setNames(newListOfNames: MutableList<String>) {
         listOfNames.value = newListOfNames
@@ -29,28 +22,39 @@ class SharedViewModel : ViewModel() {
         listOfHours.value = newListOfHours
 
     }
+    fun getHours(): MutableList<String>? {
+        return listOfHours.value
+    }
     fun setTotalHours(newTotalHours: String) {
         if (newTotalHours.isEmpty()) { totalHours.value = 0.00 }
         else { totalHours.value = newTotalHours.toDouble() }
     }
-    fun getHours(): MutableList<String>? {
-        return listOfHours.value
-    }
+
+
+
+    // Initialized using input from Fragment: InputBills
+    private val listOfBills: MutableLiveData<MutableList<String>> by lazy { MutableLiveData<MutableList<String>>() }
+    private val totalBills: MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
 
     fun setBills(newListOfBills: MutableList<String>) {
         listOfBills.value = newListOfBills
+    }
+    fun getBills(): MutableList<String>? {
+        return listOfBills.value
     }
     fun setTotalBills(newTotalBills: String) {
         if (newTotalBills.isEmpty()) { totalBills.value = 0.00 }
         else { totalBills.value = newTotalBills.toDouble() }
     }
-    fun getBills(): MutableList<String>? {
-        return listOfBills.value
-        }
 
 
 
-    fun calculateTips() {
+    // Initialized at onViewCreate() of Fragment: OutputTips
+        // Gets data from SharedViewModel.
+    private val listOfTips: MutableLiveData<MutableList<Double>> by lazy { MutableLiveData<MutableList<Double>>() }
+    private val tipRate: MutableLiveData<String> by lazy { MutableLiveData<String>() }
+
+    fun setTips() {
 
         //Calculating tipRate
         var newTipRate = 0.00
@@ -69,10 +73,14 @@ class SharedViewModel : ViewModel() {
 
         listOfTips.value = newListOfTips
     }
-
     fun getTips(): MutableList<Double>? {
         return listOfTips.value
     }
+
+
+
+
+
 
 
 }
