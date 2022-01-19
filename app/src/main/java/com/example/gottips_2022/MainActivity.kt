@@ -10,7 +10,7 @@ import com.example.gottips_2022.model.SharedViewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewModel1: SharedViewModel
+    private lateinit var viewModel: SharedViewModel
 
     private fun displayFragment(x: Fragment) {
 
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel1 = ViewModelProvider(this)[SharedViewModel::class.java]
+        viewModel = ViewModelProvider(this)[SharedViewModel::class.java]
 
         var displayCheck = 0
         fun changeHeaderAndFooter(x: Int) {
