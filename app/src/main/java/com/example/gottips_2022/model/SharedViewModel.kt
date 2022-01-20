@@ -85,8 +85,9 @@ class SharedViewModel : ViewModel() {
 
     //Rounding tips for display
     private val roundedListOfTips: MutableLiveData<MutableList<Int>> by lazy { MutableLiveData<MutableList<Int>>() }
+    private val roundedSumOfTips: MutableLiveData<Int> by lazy { MutableLiveData<Int>() }
 
-    fun roundTips() {
+    fun setRoundedTips() {
 
         val newListOfRoundedTips = mutableListOf<Int>()
 
@@ -100,11 +101,13 @@ class SharedViewModel : ViewModel() {
             }
         }
 
-
+        roundedSumOfTips.value = newListOfRoundedTips.sum()
         roundedListOfTips.value = newListOfRoundedTips
     }
     fun getRoundedTips(): MutableList<Int>? {
         return roundedListOfTips.value
     }
+
+
 
 }

@@ -59,7 +59,7 @@ class OutputTips : Fragment() {
 
         // Calculating partnerTips
         viewModel3.setTips()
-        viewModel3.roundTips()
+        viewModel3.setRoundedTips()
         binding.tips1.setText(viewModel3.getRoundedTips()!![0].toString())
         binding.tips2.setText(viewModel3.getRoundedTips()!![1].toString())
         binding.tips3.setText(viewModel3.getRoundedTips()!![2].toString())
@@ -90,7 +90,9 @@ class OutputTips : Fragment() {
         binding.tips28.setText(viewModel3.getRoundedTips()!![27].toString())
         binding.tips29.setText(viewModel3.getRoundedTips()!![28].toString())
         binding.tips30.setText(viewModel3.getRoundedTips()!![29].toString())
-        
+
+
+
     }
 
     override fun onDestroy() {
