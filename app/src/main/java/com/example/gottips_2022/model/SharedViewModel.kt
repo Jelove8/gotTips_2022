@@ -60,7 +60,7 @@ class SharedViewModel : ViewModel() {
         //Calculating tipRate
         var newTipRate = 0.00
         if (totalHours.value != 0.00) { newTipRate = totalBills.value!! / totalHours.value!! }
-        tipRate.value = newTipRate.toString()
+
 
         //Calculating partnerTips
         val newListOfTips = mutableListOf<Double>()
@@ -76,6 +76,7 @@ class SharedViewModel : ViewModel() {
 
         }
 
+        tipRate.value = newTipRate.toString()
         listOfTips.value = newListOfTips
     }
     fun getTips(): MutableList<Double>? {
@@ -109,5 +110,15 @@ class SharedViewModel : ViewModel() {
     }
 
 
+    fun returnTotalsAndRate(x: Int): String {
+
+        return when (x) {
+            1 -> { totalBills.value.toString() }
+            2 -> { totalHours.value.toString() }
+            3 -> { tipRate.value.toString() }
+            else -> { "Error" }
+        }
+
+    }
 
 }

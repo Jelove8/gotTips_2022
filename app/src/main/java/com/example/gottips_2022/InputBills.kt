@@ -9,6 +9,8 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.activityViewModels
 import com.example.gottips_2022.databinding.FragmentInputBillsBinding
 import com.example.gottips_2022.model.SharedViewModel
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 class InputBills : Fragment() {
 
@@ -25,7 +27,8 @@ class InputBills : Fragment() {
         if (binding.inputTens.text.isNotEmpty()) { currentTotalBills += binding.inputTens.text.toString().toDouble() }
         if (binding.inputTwenties.text.isNotEmpty()) { currentTotalBills += binding.inputTwenties.text.toString().toDouble() }
 
-        binding.outputTotalTips.text = currentTotalBills.toString()
+        val roundedTotalBills = BigDecimal(currentTotalBills).setScale(2, RoundingMode.HALF_EVEN).toString()
+        binding.outputTotalTips.text = roundedTotalBills
         viewModel2.setTotalBills(currentTotalBills.toString())
 
     }

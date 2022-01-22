@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.gottips_2022.databinding.FragmentInputPartnersBinding
 import com.example.gottips_2022.model.SharedViewModel
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 
 
@@ -54,7 +56,9 @@ class InputPartners : Fragment() {
         if (binding.hours29.text.isNotEmpty()) { currentSumHours += binding.hours29.text.toString().toDouble() }
         if (binding.hours30.text.isNotEmpty()) { currentSumHours += binding.hours30.text.toString().toDouble() }
 
-        binding.outputTotalHours.text = currentSumHours.toString()
+        val roundedSumHours = BigDecimal(currentSumHours).setScale(2, RoundingMode.HALF_EVEN).toString()
+
+        binding.outputTotalHours.text = roundedSumHours
         viewModel1.setTotalHours(currentSumHours.toString())
 
     }

@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/header_bill_type"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/bill_type"
         android:textAlignment="textStart"
@@ -81,7 +81,7 @@
     <TextView
         android:id="@+id/header_dollar_amount"
         android:layout_width="128dp"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/amount"
         android:textAlignment="center"

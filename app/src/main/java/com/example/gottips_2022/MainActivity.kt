@@ -1,5 +1,6 @@
 package com.example.gottips_2022
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -32,60 +34,52 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this)[SharedViewModel::class.java]
 
         var displayCheck = 0
-        fun changeHeaderAndFooter(x: Int) {
+        fun changeHeader(x: Int) {
             when (x) {
                 0 -> {
                     binding.header.text = getString(R.string.header0)
-                    binding.footer.text = getString(R.string.footer0)
+                    binding.confirmButton.text = getString(R.string.y_e_s)
+                    binding.backButton.visibility = View.INVISIBLE
+                    binding.imgBackButton.visibility = View.INVISIBLE
                 }
                 1 -> {
                     binding.header.text = getString(R.string.header1)
-                    binding.footer.text = getString(R.string.footer1)
+                    binding.confirmButton.text = getString(R.string.confirm1)
+                    binding.backButton.visibility = View.VISIBLE
+                    binding.imgBackButton.visibility = View.VISIBLE
                 }
 
                 2 -> {
                     binding.header.text = getString(R.string.header2)
-                    binding.footer.text = getString(R.string.footer2)
-                    binding.footer.visibility = View.VISIBLE
-                    binding.textView1.visibility = View.INVISIBLE
-                    binding.textView2.visibility = View.INVISIBLE
-                    binding.textView3.visibility = View.INVISIBLE
-                    binding.outputTotalTips.visibility = View.INVISIBLE
-                    binding.outputTotalHours.visibility = View.INVISIBLE
-                    binding.outputTipRate.visibility = View.INVISIBLE
                 }
 
                 3 -> {
                     binding.header.text = getString(R.string.header3)
-                    binding.textView1.visibility = View.VISIBLE
-                    binding.textView2.visibility = View.VISIBLE
-                    binding.textView3.visibility = View.VISIBLE
-                    binding.outputTotalTips.visibility = View.VISIBLE
-                    binding.outputTotalHours.visibility = View.VISIBLE
-                    binding.outputTipRate.visibility = View.VISIBLE
-                    binding.footer.visibility = View.INVISIBLE
+
                 }
             }
         }
 
-        binding.continueButton.setOnClickListener {
+        binding.confirmButton.setOnClickListener {
 
             when (displayCheck) {
                 0 -> {
                     binding.fragmentContainerView.visibility = View.VISIBLE
                     displayFragment(InputPartners())
-                    changeHeaderAndFooter(1)
+                    changeHeader(1)
                 }
 
                 1 -> {
                     displayFragment(InputBills())
-                    changeHeaderAndFooter(2)
+                    changeHeader(2)
                 }
 
                 2 -> {
                     displayFragment(OutputTips())
-                    changeHeaderAndFooter(3)
+                    changeHeader(3)
+
                 }
+
             }
 
             if (displayCheck != 3) {
@@ -98,18 +92,20 @@ class MainActivity : AppCompatActivity() {
             when (displayCheck) {
                 1 -> {
                     binding.fragmentContainerView.visibility = View.INVISIBLE
-                    changeHeaderAndFooter(0)
+                    changeHeader(0)
                 }
 
                 2 -> {
                     displayFragment(InputPartners())
-                    changeHeaderAndFooter(1)
+                    changeHeader(1)
                 }
 
                 3 -> {
                     displayFragment(InputBills())
-                    changeHeaderAndFooter(2)
+                    changeHeader(2)
+
                 }
+
             }
 
             if (displayCheck != 0) {

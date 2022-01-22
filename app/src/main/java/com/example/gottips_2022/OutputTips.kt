@@ -90,9 +90,6 @@ class OutputTips : Fragment() {
         binding.tips28.setText(viewModel3.getRoundedTips()!![27].toString())
         binding.tips29.setText(viewModel3.getRoundedTips()!![28].toString())
         binding.tips30.setText(viewModel3.getRoundedTips()!![29].toString())
-
-
-
     }
 
     override fun onDestroy() {

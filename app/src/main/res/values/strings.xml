@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">gotTips_2022</string>
 
+    <!-- Title -->
+    <string name="t">T</string>
+    <string name="o">o</string>
+    <string name="g">g</string>
+    <string name="i">i</string>
+    <string name="p">p</string>
+    <string name="s">s</string>
+    <string name="question_mark">?</string>
+
     <!-- Headers -->
     <string name="header0">W E L C O M E</string>
     <string name="header1">I N P U T \u0020 P A R T N E R S</string>
@@ -8,7 +17,6 @@
     <string name="header3">O U T P U T \u0020 T I P S</string>
 
     <!-- Footers -->
-    <string name="footer0">Wrap your coins and count your bills, Thank you for counting tips today!</string>
     <string name="footer1">Copy the names and hours from the tip-report sheet, and input them above.</string>
     <string name="footer2">Input the dollar amounts for each type of bill. Make sure to exchange coins first.</string>
     <string name="footer3">TODO</string>
@@ -16,12 +24,13 @@
     <!-- Fragment: MainActivity -->
     <string name="g_o_t">g o t</string>
     <string name="t_i_p_s">T i p s ?</string>
+    <string name="y_e_s">Y E S !</string>
 
     <!-- Fragment: InputPartners -->
     <string name="partner_name">Partner Name</string>
     <string name="hours">Hours</string>
     <string name="tahir_ramirez_atkinson">Tahir Ramirez Atkinson</string>
-
+    <string name="confirm1">Confirm hours?</string>
 
     <!-- Fragment: InputBills -->
     <string name="bill_type">Bill Type</string>
@@ -39,10 +48,12 @@
     <string name="total_hours">Total Hours :</string>
     <string name="empty" />
 
-    <!-- EditText Hints -->
+    <!-- Miscellaneous -->
     <string name="zero_dot_zero_zero">0.00</string>
-    <string name="enter_new_partner">enter new partner…</string>
+    <string name="enter_new_partner"><i>enter new name…</i></string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error">Error</string>
+
 
 
 </resources>
