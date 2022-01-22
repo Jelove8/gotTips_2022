@@ -41,12 +41,14 @@ class MainActivity : AppCompatActivity() {
                     binding.confirmButton.text = getString(R.string.y_e_s)
                     binding.backButton.visibility = View.INVISIBLE
                     binding.imgBackButton.visibility = View.INVISIBLE
+                    binding.TitleConstraint.visibility = View.VISIBLE
                 }
                 1 -> {
                     binding.header.text = getString(R.string.header1)
                     binding.confirmButton.text = getString(R.string.confirm1)
                     binding.backButton.visibility = View.VISIBLE
                     binding.imgBackButton.visibility = View.VISIBLE
+                    binding.TitleConstraint.visibility = View.INVISIBLE
                 }
 
                 2 -> {

@@ -8,13 +8,13 @@
     <string name="i">i</string>
     <string name="p">p</string>
     <string name="s">s</string>
-    <string name="question_mark">?</string>
+    <string name="question_mark">\?</string>
 
     <!-- Headers -->
     <string name="header0">W E L C O M E</string>
-    <string name="header1">I N P U T \u0020 P A R T N E R S</string>
-    <string name="header2">I N P U T \u0020 B I L L S</string>
-    <string name="header3">O U T P U T \u0020 T I P S</string>
+    <string name="header1">P A R T N E R S</string>
+    <string name="header2">B I L L S</string>
+    <string name="header3">T I P S</string>
 
     <!-- Footers -->
     <string name="footer1">Copy the names and hours from the tip-report sheet, and input them above.</string>
@@ -24,13 +24,14 @@
     <!-- Fragment: MainActivity -->
     <string name="g_o_t">g o t</string>
     <string name="t_i_p_s">T i p s ?</string>
-    <string name="y_e_s">Y E S !</string>
+    <string name="y_e_s">YES!</string>
 
     <!-- Fragment: InputPartners -->
-    <string name="partner_name">Partner Name</string>
+    <string name="name">Name</string>
     <string name="hours">Hours</string>
+    <string name="total_hours">total hours</string>
     <string name="tahir_ramirez_atkinson">Tahir Ramirez Atkinson</string>
-    <string name="confirm1">Confirm hours?</string>
+    <string name="confirm1">approve</string>
 
     <!-- Fragment: InputBills -->
     <string name="bill_type">Bill Type</string>
@@ -45,13 +46,14 @@
     <string name="tips_in_dollars">Tips ($)</string>
     <string name="total_tips">Total Tips :</string>
     <string name="tip_rate">Tip Rate :</string>
-    <string name="total_hours">Total Hours :</string>
+
     <string name="empty" />
 
     <!-- Miscellaneous -->
     <string name="zero_dot_zero_zero">0.00</string>
+    <string name="zero">0</string>
     <string name="enter_new_partner"><i>enter new name…</i></string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="blank"> </string>
     <string name="error">Error</string>
 
 

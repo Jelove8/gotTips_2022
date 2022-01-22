@@ -4,28 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="600dp"
+    android:layout_height="616dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
     tools:context=".InputPartners">
 
     <TextView
+        android:id="@+id/headerShadowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-170dp"
+        android:background="@drawable/shadowing"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lol_TextView"
+        android:layout_width="11dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="130dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/headerName"
-        android:layout_width="256dp"
-        android:layout_height="32dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/partner_name"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#FFFFFF"
+        android:fontFamily="serif"
+        android:text="@string/name"
         android:textAlignment="textStart"
+        android:textColor="#00695C"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/header_hours"
-        android:layout_width="128dp"
-        android:layout_height="32dp"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:id="@+id/headerHours"
+        android:layout_width="130dp"
+        android:layout_height="36dp"
+        android:background="#FFFFFF"
+        android:fontFamily="serif"
         android:text="@string/hours"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
+        android:textColor="#00695C"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,9 +62,13 @@
     <ScrollView
         android:id="@+id/ScrollView_of_EditTexts"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="480dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerName"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="9dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ConstraintLayout1"
@@ -53,331 +85,391 @@
 
                 <EditText
                     android:id="@+id/partner1"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
+                    android:background="@android:drawable/editbox_background_normal"
                     android:hint="@string/enter_new_partner"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/partner2"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/partner3"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/partner4"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/partner5"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/partner6"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/partner7"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/partner8"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/partner9"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/partner10"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner11"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/partner12"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/partner13"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner14"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner15"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner16"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/partner17"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner18"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner19"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner20"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner21"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/partner22"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner23"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner24"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner25"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner26"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/partner27"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner28"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner29"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/partner30"
-                    android:layout_width="256dp"
+                    android:layout_width="254dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/enter_new_partner"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
             </LinearLayout>
@@ -393,331 +485,391 @@
 
                 <EditText
                     android:id="@+id/hours1"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
+                    android:background="@android:drawable/editbox_background_normal"
                     android:hint="@string/zero_dot_zero_zero"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours2"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours3"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours4"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours5"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours6"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours7"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours8"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours9"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours10"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours11"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours12"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours13"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours14"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours15"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours16"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours17"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours18"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours19"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours20"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours21"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours22"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours23"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours24"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours25"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours26"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours27"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours28"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
                     android:id="@+id/hours29"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/hours30"
-                    android:layout_width="128dp"
+                    android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
-                    android:hint="@string/zero_dot_zero_zero"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:hint="@string/blank"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
+                    android:textColor="#00695C"
                     android:textSize="20sp"
                     tools:ignore="TextContrastCheck" />
 
@@ -727,31 +879,45 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <TableRow
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footerContainer"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/toast_frame"
+        android:foregroundGravity="center"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/header_TotalHours"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/total_hours"
-            android:textSize="24sp" />
+            android:id="@+id/outputTotalHours"
+            android:layout_width="80dp"
+            android:layout_height="28dp"
+            android:fontFamily="serif"
+            android:text="@string/zero_dot_zero_zero"
+            android:textAlignment="textStart"
+            android:textColor="#00695C"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/outputTotalHours"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/zero_dot_zero_zero"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </TableRow>
+            android:id="@+id/header_totalHours"
+            android:layout_width="120dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="-16dp"
+            android:fontFamily="serif"
+            android:text="@string/total_hours"
+            android:textAlignment="textEnd"
+            android:textColor="#00695C"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/outputTotalHours"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

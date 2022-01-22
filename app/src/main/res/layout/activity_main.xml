@@ -5,7 +5,6 @@
     android:id="@+id/MainConstraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="8dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -63,7 +62,7 @@
         android:id="@+id/confirmButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#283593"
         android:text="@string/y_e_s"
         android:textStyle="bold"
@@ -176,7 +175,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="616dp"
         android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         android:visibility="invisible"

@@ -1,5 +1,6 @@
 package com.example.gottips_2022
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,7 +22,44 @@ class InputPartners : Fragment() {
     private var binding1: FragmentInputPartnersBinding? = null
     private val binding get() = binding1!!
 
-    // Variable & function necessary to dynamically update outputTotalHours[TextView]
+    @SuppressLint("SetTextI18n")
+    private fun calculateTotalPartners() {
+
+        // Calculating & displaying totalPartners
+        var totalPartners = 0
+        if (binding.partner1.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner2.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner3.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner4.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner5.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner6.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner7.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner8.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner9.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner10.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner11.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner12.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner13.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner14.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner15.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner16.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner17.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner18.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner19.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner20.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner21.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner22.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner23.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner24.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner25.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner26.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner27.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner28.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner29.text.isNotEmpty()) { totalPartners++ }
+        if (binding.partner30.text.isNotEmpty()) { totalPartners++ }
+
+    }
+
     private fun calculateSumHours() {
         var currentSumHours = 0.00
 
@@ -63,11 +101,13 @@ class InputPartners : Fragment() {
 
     }
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding1 = FragmentInputPartnersBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -167,6 +207,127 @@ class InputPartners : Fragment() {
         binding.hours29.doAfterTextChanged { calculateSumHours() }
         binding.hours30.doAfterTextChanged { calculateSumHours() }
 
+        binding.partner1.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner2.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner3.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner4.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner5.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner6.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner7.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner8.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner9.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner10.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner11.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner12.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner13.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner14.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner15.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner16.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner17.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner18.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner19.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner20.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner21.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner22.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner23.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner24.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner25.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner26.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner27.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner28.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner29.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+        binding.partner30.doAfterTextChanged {
+            calculateTotalPartners()
+
+        }
+
     }
 
     override fun onDestroyView() {
@@ -201,5 +362,6 @@ class InputPartners : Fragment() {
 
     }
 }
+
 
 
