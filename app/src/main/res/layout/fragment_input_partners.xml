@@ -65,10 +65,8 @@
         android:layout_height="480dp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerName"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="9dp">
+        tools:layout_editor_absoluteX="8dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ConstraintLayout1"
@@ -154,6 +152,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -167,6 +166,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -180,6 +180,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -193,6 +194,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -206,6 +208,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -219,6 +222,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -232,6 +236,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -245,6 +250,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -258,6 +264,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -271,6 +278,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -284,6 +292,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -297,6 +306,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -310,6 +320,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -323,6 +334,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -336,6 +348,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -349,6 +362,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -362,6 +376,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -375,6 +390,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -388,6 +404,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -401,6 +418,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -414,6 +432,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -427,6 +446,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -440,6 +460,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -453,6 +474,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -466,6 +488,7 @@
                     android:layout_height="56dp"
                     android:autofillHints="name"
                     android:background="@android:drawable/editbox_background_normal"
+                    android:cursorVisible="false"
                     android:hint="@string/blank"
                     android:inputType="text"
                     android:textAlignment="textStart"
@@ -611,7 +634,7 @@
                     android:textAlignment="center"
                     android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours11"
@@ -624,10 +647,10 @@
                     android:textAlignment="center"
                     android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
-                    android:id="@+id/hours12"
+                    android:id="@+id/hours13"
                     android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
@@ -640,7 +663,7 @@
                     tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                 <EditText
-                    android:id="@+id/hours13"
+                    android:id="@+id/hours12"
                     android:layout_width="130dp"
                     android:layout_height="56dp"
                     android:autofillHints="name"
@@ -689,7 +712,7 @@
                     android:textAlignment="center"
                     android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours17"
@@ -832,7 +855,7 @@
                     android:textAlignment="center"
                     android:textColor="#00695C"
                     android:textSize="20sp"
-                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
                 <EditText
                     android:id="@+id/hours28"
