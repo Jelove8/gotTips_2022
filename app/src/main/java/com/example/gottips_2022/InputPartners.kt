@@ -22,44 +22,6 @@ class InputPartners : Fragment() {
     private var binding1: FragmentInputPartnersBinding? = null
     private val binding get() = binding1!!
 
-    @SuppressLint("SetTextI18n")
-    private fun calculateTotalPartners() {
-
-        // Calculating & displaying totalPartners
-        var totalPartners = 0
-        if (binding.partner1.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner2.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner3.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner4.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner5.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner6.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner7.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner8.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner9.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner10.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner11.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner12.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner13.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner14.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner15.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner16.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner17.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner18.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner19.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner20.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner21.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner22.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner23.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner24.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner25.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner26.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner27.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner28.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner29.text.isNotEmpty()) { totalPartners++ }
-        if (binding.partner30.text.isNotEmpty()) { totalPartners++ }
-
-    }
-
     private fun calculateSumHours() {
         var currentSumHours = 0.00
 
@@ -99,6 +61,44 @@ class InputPartners : Fragment() {
         binding.outputTotalHours.text = roundedSumHours
         viewModel1.setTotalHours(currentSumHours.toString())
 
+    }
+
+    private var initialCheck = 0
+    @SuppressLint("SetTextI18n")
+    private fun initializeNames() {
+        if (initialCheck == 0) {
+            binding.partner1.setText("Tahir Atkinson")
+            binding.partner2.setText("Dessie Bowerman")
+            binding.partner3.setText("Brooks Brawner")
+            binding.partner4.setText("Anjelo Ecube")
+            binding.partner5.setText("Adia Granger")
+            binding.partner6.setText("Erin Jelley")
+            binding.partner7.setText("Ki Kim")
+            binding.partner8.setText("Sierra Leslie")
+            binding.partner9.setText("Ayanna Cameron")
+            binding.partner10.setText("Taja Parker")
+            binding.partner11.setText("Tim Reiss")
+            binding.partner12.setText("Mariah Rivera")
+            binding.partner13.setText("Morgan St. John")
+            binding.partner14.setText("Penda Sy")
+            binding.partner15.setText("Bernard Walker")
+            binding.partner16.setText("Kylee Washington")
+            binding.partner17.text = null
+            binding.partner18.text = null
+            binding.partner19.text = null
+            binding.partner20.text = null
+            binding.partner21.text = null
+            binding.partner22.text = null
+            binding.partner23.text = null
+            binding.partner24.text = null
+            binding.partner25.text = null
+            binding.partner26.text = null
+            binding.partner27.text = null
+            binding.partner28.text = null
+            binding.partner29.text = null
+            binding.partner30.text = null
+        }
+        initialCheck++
     }
 
 
@@ -142,6 +142,7 @@ class InputPartners : Fragment() {
         binding.partner28.setText(viewModel1.getNames()?.get(27))
         binding.partner29.setText(viewModel1.getNames()?.get(28))
         binding.partner30.setText(viewModel1.getNames()?.get(29))
+        initializeNames()
 
         binding.hours1.setText(viewModel1.getHours()?.get(0))
         binding.hours2.setText(viewModel1.getHours()?.get(1))
@@ -206,127 +207,6 @@ class InputPartners : Fragment() {
         binding.hours28.doAfterTextChanged { calculateSumHours() }
         binding.hours29.doAfterTextChanged { calculateSumHours() }
         binding.hours30.doAfterTextChanged { calculateSumHours() }
-
-        binding.partner1.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner2.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner3.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner4.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner5.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner6.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner7.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner8.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner9.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner10.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner11.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner12.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner13.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner14.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner15.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner16.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner17.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner18.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner19.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner20.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner21.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner22.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner23.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner24.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner25.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner26.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner27.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner28.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner29.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
-        binding.partner30.doAfterTextChanged {
-            calculateTotalPartners()
-
-        }
 
     }
 

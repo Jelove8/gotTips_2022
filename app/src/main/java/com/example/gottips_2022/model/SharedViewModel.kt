@@ -82,6 +82,9 @@ class SharedViewModel : ViewModel() {
     fun getTips(): MutableList<Double>? {
         return listOfTips.value
     }
+    fun getTipRate(): String? {
+        return tipRate.value
+    }
 
 
     //Rounding tips for display
@@ -107,18 +110,6 @@ class SharedViewModel : ViewModel() {
     }
     fun getRoundedTips(): MutableList<Int>? {
         return roundedListOfTips.value
-    }
-
-
-    fun returnTotalsAndRate(x: Int): String {
-
-        return when (x) {
-            1 -> { totalBills.value.toString() }
-            2 -> { totalHours.value.toString() }
-            3 -> { tipRate.value.toString() }
-            else -> { "Error" }
-        }
-
     }
 
 }

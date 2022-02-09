@@ -90,6 +90,102 @@ class OutputTips : Fragment() {
         binding.tips28.setText(viewModel3.getRoundedTips()!![27].toString())
         binding.tips29.setText(viewModel3.getRoundedTips()!![28].toString())
         binding.tips30.setText(viewModel3.getRoundedTips()!![29].toString())
+
+        // Setting tips that equal $0 to blank text
+        if (binding.tips1.text.contentEquals("0")) {
+            binding.tips1.text = null
+        }
+        if (binding.tips2.text.contentEquals("0")) {
+            binding.tips2.text = null
+        }
+        if (binding.tips3.text.contentEquals("0")) {
+            binding.tips3.text = null
+        }
+        if (binding.tips4.text.contentEquals("0")) {
+            binding.tips4.text = null
+        }
+        if (binding.tips5.text.contentEquals("0")) {
+            binding.tips5.text = null
+        }
+        if (binding.tips6.text.contentEquals("0")) {
+            binding.tips6.text = null
+        }
+        if (binding.tips7.text.contentEquals("0")) {
+            binding.tips7.text = null
+        }
+        if (binding.tips8.text.contentEquals("0")) {
+            binding.tips8.text = null
+        }
+        if (binding.tips9.text.contentEquals("0")) {
+            binding.tips9.text = null
+        }
+        if (binding.tips10.text.contentEquals("0")) {
+            binding.tips10.text = null
+        }
+        if (binding.tips11.text.contentEquals("0")) {
+            binding.tips11.text = null
+        }
+        if (binding.tips12.text.contentEquals("0")) {
+            binding.tips12.text = null
+        }
+        if (binding.tips13.text.contentEquals("0")) {
+            binding.tips13.text = null
+        }
+        if (binding.tips14.text.contentEquals("0")) {
+            binding.tips14.text = null
+        }
+        if (binding.tips15.text.contentEquals("0")) {
+            binding.tips15.text = null
+        }
+        if (binding.tips16.text.contentEquals("0")) {
+            binding.tips16.text = null
+        }
+        if (binding.tips17.text.contentEquals("0")) {
+            binding.tips17.text = null
+        }
+        if (binding.tips18.text.contentEquals("0")) {
+            binding.tips18.text = null
+        }
+        if (binding.tips19.text.contentEquals("0")) {
+            binding.tips19.text = null
+        }
+        if (binding.tips20.text.contentEquals("0")) {
+            binding.tips20.text = null
+        }
+        if (binding.tips21.text.contentEquals("0")) {
+            binding.tips21.text = null
+        }
+        if (binding.tips22.text.contentEquals("0")) {
+            binding.tips22.text = null
+        }
+        if (binding.tips23.text.contentEquals("0")) {
+            binding.tips23.text = null
+        }
+        if (binding.tips24.text.contentEquals("0")) {
+            binding.tips24.text = null
+        }
+        if (binding.tips25.text.contentEquals("0")) {
+            binding.tips25.text = null
+        }
+        if (binding.tips26.text.contentEquals("0")) {
+            binding.tips26.text = null
+        }
+        if (binding.tips27.text.contentEquals("0")) {
+            binding.tips27.text = null
+        }
+        if (binding.tips28.text.contentEquals("0")) {
+            binding.tips28.text = null
+        }
+        if (binding.tips29.text.contentEquals("0")) {
+            binding.tips29.text = null
+        }
+        if (binding.tips30.text.contentEquals("0")) {
+            binding.tips30.text = null
+        }
+
+        // Displaying tipRate
+        binding.outputTipRate.text = viewModel3.getTipRate()
+
     }
 
     override fun onDestroy() {

@@ -931,14 +931,13 @@
             android:id="@+id/header_totalHours"
             android:layout_width="120dp"
             android:layout_height="28dp"
-            android:layout_marginStart="-16dp"
             android:fontFamily="serif"
             android:text="@string/total_hours"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textColor="#00695C"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/outputTotalHours"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

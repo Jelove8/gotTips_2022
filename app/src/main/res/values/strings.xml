@@ -35,7 +35,7 @@
 
     <!-- Fragment: InputBills -->
     <string name="bill_type">Bill Type</string>
-    <string name="amount">Amount ($)</string>
+    <string name="amount">Amount</string>
     <string name="o_n_e_s">O N E S</string>
     <string name="f_i_v_e_s">F I V E S</string>
     <string name="t_w_o_s">T W O S</string>
@@ -44,8 +44,8 @@
 
     <!-- Fragment: OutputTips -->
     <string name="tips_in_dollars">Tips ($)</string>
-    <string name="total_tips">Total Tips :</string>
-    <string name="tip_rate">Tip Rate :</string>
+    <string name="total_tips">total tips</string>
+    <string name="tip_rate">tip rate</string>
 
     <string name="empty" />
 
